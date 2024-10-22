@@ -6,14 +6,14 @@
 int main()
 {
     Wektor w{2};
-    w.set(0, 21);
-    w.set(1, 37);
+    w[0] = 21;
+    w[1] = 37;
     w.print();
-    
+
     std::cout << "\n-----\n\n";
     w.zmienDlugosc(4);
-    w.set(2, 69);
-    w.set(3, 420);
+    w[2] = 69;
+    w[3] = 420;
     w.print();
 
     std::cout << "\n-----\n\n";
@@ -23,4 +23,8 @@ int main()
     std::cout << "\n-----\n\n";
     w.zmienDlugosc(4);
     w.print();
+
+    w[10] = 21.37;
+    w.print();
+    std::cout << w.getDlugosc();
 }
